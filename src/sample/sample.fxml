@@ -7,16 +7,16 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <HBox prefHeight="25.0" prefWidth="600.0" VBox.vgrow="NEVER">
          <children>
-            <TextField prefHeight="27.0" prefWidth="415.0" HBox.hgrow="ALWAYS" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Add" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Remove" />
-            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" text="Toggle" />
+            <TextField fx:id="text" prefHeight="27.0" prefWidth="415.0" HBox.hgrow="ALWAYS" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addItem" text="Add" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#removeItem" text="Remove" />
+            <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#toggleItem" text="Toggle" />
          </children>
       </HBox>
-      <ListView VBox.vgrow="ALWAYS" />
+      <ListView fx:id="list" VBox.vgrow="ALWAYS" />
    </children>
 </VBox>
